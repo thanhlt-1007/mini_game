@@ -1,6 +1,7 @@
 <div class="row row-answer">
   <div class="answer">
-    <div class="answer-char has-text">
+    <div class="answer-char has-text" data-toggle="modal" 
+      data-target="<%= ".js-modal-question-#{answers_index}" %>">
       <%= answers_index + 1 %>
     </div>
     <% answer.each_with_index do |answer_char, answer_char_index| %>

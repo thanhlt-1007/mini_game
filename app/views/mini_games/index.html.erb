@@ -4,4 +4,8 @@
   <% @answers.each_with_index do |answer, answers_index| %>
     <%= render "answer", answer: answer, answers_index: answers_index, index: @index %>
   <% end %>
+
+  <% @questions.each_with_index do |question, question_index| %>
+    <%= render "question", question: question, question_index: question_index %>
+  <% end %>
 </div>
