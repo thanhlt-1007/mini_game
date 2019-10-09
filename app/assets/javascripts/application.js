@@ -16,3 +16,10 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).on('ready', function() {
+  $('.js-btn-display-answer').on('click', function() {
+    var index = $(this).data('index');
+    $('.js-row-answer').eq(index).find('.js-answer-char').removeClass('answer-char-hidden');
+  });
+});

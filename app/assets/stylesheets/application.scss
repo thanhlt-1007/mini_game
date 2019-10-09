@@ -20,6 +20,10 @@
       text-align: center;
       margin: 3px;
     }
+
+    .answer-char-hidden {
+      color: #ffffff;
+    }
     
     .has-text {
       border: 1px solid black;
@@ -27,6 +31,7 @@
     
     .final-answer {
       font-weight: 600;
+      border-width: 2px;
     }
   }
 }
