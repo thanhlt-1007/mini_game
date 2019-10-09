@@ -1,0 +1,10 @@
+<div class="row row-answer">
+  <div class="answer">
+    <div class="answer-char has-text">
+      <%= answers_index + 1 %>
+    </div>
+    <% answer.each_with_index do |answer_char, answer_char_index| %>
+      <%= render "answer_char", answer_char: answer_char, answer_char_index: answer_char_index, index: index %>
+    <% end %>
+  </div>
+</div>
