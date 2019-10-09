@@ -7,6 +7,6 @@
     <% answer = pair[1] %>
 
     <%= render "answer", answer: answer, answers_index: pair_index, index: index %>
-    <%= render "question", question: question, question_index: pair_index %>
+    <%= render "question", question: question, answer: answer, question_index: pair_index %>
   <% end %>
 </div>

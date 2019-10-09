@@ -7,8 +7,15 @@
           Ô chữ số <%= question_index + 1 %>
         </h4>
       </div>
-      <div class="modal-body">
-        <p><%= question %></p>
+      <div class="modal-body" style="height: 100px;">
+        <div style="width: 100%">
+          <p><%= question %></p>
+        </div>
+        <div style="width: 100%;">
+          <% answer_chars = answer_chars(answer).join("") %>
+          <input type="text" data-answer="<%= answer_chars(answer).join("") %>" data-index="<%= question_index %>"
+            class="form-control js-input-answer" placeholder="Nhập câu trả lời và Enter để kiểm tra">
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary pull-left"

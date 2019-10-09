@@ -31,4 +31,24 @@ $(document).on('ready', function() {
     $('.js-tab-links').removeClass('active');
     $(this).addClass('active');
   });
+
+  $('.js-input-answer').on('keypress', function(event) {
+    var keyCode = event.keyCode;
+    if(keyCode == '13') {
+      var answer = $(this).data('answer');
+      var index = $(this).data('index');
+      var val = $(this).val().replace(/ +/g, "").toUpperCase();
+
+      if(answer == val) {
+        $('.js-row-answer').eq(index).find('.js-answer-char').removeClass('answer-char-hidden');
+        $(this).closest('.js-modal-question-'+ index).modal('hide');
+        $('.loader').removeClass('hidden');
+        setTimeout(function(){
+          $('.loader').addClass('hidden');
+        }, 2000);
+      } else {
+
+      }
+    }
+  });
 });

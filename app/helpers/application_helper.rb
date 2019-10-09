@@ -5,4 +5,8 @@ module ApplicationHelper
 
     "#{has_text_css} #{final_answer_css}"
   end
+
+  def answer_chars answer
+    answer.select {|answer_char| answer_char != "_"}
+  end
 end
