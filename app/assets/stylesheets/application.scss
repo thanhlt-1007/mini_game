@@ -1,37 +1,84 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.title {
-  text-align: center;
-  margin-bottom: 15px;
-}
+.minigame-container {
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .row-answer {
+    text-align: center;
+  
+    .answer {
+      display: inline-block;
+  
+      .answer-char {
+        float: left;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        margin: 2px;
+      }
+  
+      .answer-char-hidden {
+        color: #ffffff;
+      }
+      
+      .has-text {
+        border: 1px solid black;
+      }
+      
+      .final-answer {
+        font-weight: 600;
+        border-width: 2px;
+      }
+    }
+  }
 
-.row-answer {
-  text-align: center;
+  .tab {
+    float: left;
+    border: 1px solid #cccccc;
+    background-color: #f1f1f1;
+    width: 10%;
+    height: 900px;
+    .tab-links {
+      display: block;
+      background-color: inherit;
+      color: #000000;
+      padding: 15px 10px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+      &:hover {
+        background-color: #dddddd;
+      }
+    }
+    .tab-links.active {
+      background-color: #cccccc;
+    }
+  }
 
-  .answer {
-    display: inline-block;
+  .tab-content {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #cccccc;
+    width: 90%;
+    border-left: none;
+    height: 900px;
 
-    .answer-char {
-      float: left;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      margin: 3px;
+    .text-strong {
+      font-weight: 500;
     }
 
-    .answer-char-hidden {
-      color: #ffffff;
-    }
-    
-    .has-text {
-      border: 1px solid black;
-    }
-    
-    .final-answer {
-      font-weight: 600;
-      border-width: 2px;
+    .img-chip {
+      width: 25px;
+      height: 25px;
     }
   }
 }

@@ -22,4 +22,13 @@ $(document).on('ready', function() {
     var index = $(this).data('index');
     $('.js-row-answer').eq(index).find('.js-answer-char').removeClass('answer-char-hidden');
   });
+
+  $('.js-tab-links').on('click', function() {
+    var index = $(this).data('index');
+    $('.js-tab-content').hide();
+    $('.js-tab-content').eq(index).show();
+
+    $('.js-tab-links').removeClass('active');
+    $(this).addClass('active');
+  });
 });

@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container minigame-container">
   <h2 class="title">Ô CHỮ VUI VẺ</h2>
 
-  <% @answers.each_with_index do |answer, answers_index| %>
-    <%= render "answer", answer: answer, answers_index: answers_index, index: @index %>
-  <% end %>
+  <div class="tab">
+    <button class="tab-links js-tab-links active" data-index="0">Luật chơi</button>
+    <button class="tab-links js-tab-links" data-index="1">Ô chữ</button>
+  </div>
 
-  <% @questions.each_with_index do |question, question_index| %>
-    <%= render "question", question: question, question_index: question_index %>
-  <% end %>
+  <%= render "rule_content" %>
+  <%= render "game_content", answers: @answers, questions: @questions, index: @index %>
 </div>
