@@ -2,11 +2,11 @@
   <h3>Ô chữ</h3>
   <p>Chọn lần lượt các ô chữ và trả lời để nhận gợi ý về từ khoá là cột đang được in đậm</p><br>
 
-  <% answers.each_with_index do |answer, answers_index| %>
-    <%= render "answer", answer: answer, answers_index: answers_index, index: index %>
-  <% end %>
+  <% questions.zip(answers).each_with_index do |pair, pair_index| %>
+    <% question = pair[0] %>
+    <% answer = pair[1] %>
 
-  <% questions.each_with_index do |question, question_index| %>
-    <%= render "question", question: question, question_index: question_index %>
+    <%= render "answer", answer: answer, answers_index: pair_index, index: index %>
+    <%= render "question", question: question, question_index: pair_index %>
   <% end %>
 </div>
